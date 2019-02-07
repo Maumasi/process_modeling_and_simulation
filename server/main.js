@@ -6,7 +6,7 @@ import { Meteor } from 'meteor/meteor';
 // }
 
 Meteor.startup(() => {
-  console.log(Meteor.settings.secret.MODE);
+  // console.log(Meteor.settings.secret.MODE);
   // If the Links collection is empty, add some data.
   // if (Links.find().count() === 0) {
   //   insertLink(
