@@ -1,7 +1,22 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
-import App from '/imports/ui/App'
+import { Navigation, Footer, HomeHero } from '/imports/views/components';
+
+const App = () => {
+  return (
+      <main>
+        <div>
+          <HomeHero />
+          <Navigation />
+        </div>
+
+        <Footer />
+      </main>
+  );
+}
+
+
 
 Meteor.startup(() => {
   render(<App />, document.getElementById('react-target'));
