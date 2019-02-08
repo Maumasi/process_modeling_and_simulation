@@ -49,14 +49,16 @@ function gitMessageBuilder() {
     heading = 'FEATURE'
   } else if(argv.x) {
     heading = 'HOTFIX'
+  } else if(argv.m) {
+    heading = 'MESSAGE';
   } else {
     heading = 'AUTO-COMMIT';
   }
 
   let message = argv.m;
 
-  if(!argv.m) {
-    message = 'no developer message';
+  if(!(message.length > 0)) {
+    message = 'no message for commit.';
   }
   return `[BRANCH] ${branch} | [USER] ${user} :: ${heading} :: ${message}`;
 }
