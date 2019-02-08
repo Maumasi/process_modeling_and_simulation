@@ -38,7 +38,7 @@ gulp.task('watch', watch);
 
 // =================== Git  ====================================================
 
-function gitMessageHeading() {
+function gitMessageBuilder() {
   // find current branch
   const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
   //
@@ -51,15 +51,23 @@ function gitMessageHeading() {
     heading = 'FEATURE'
   } else if(argv.x) {
     heading = 'HOTFIX'
+  } else {
+    heading = 'AUTO-COMMIT';
   }
-  return `${heading} | ${currentBranch} :: ${argv.m}`;
+
+  let message = argv.m;
+
+  if(!argv.m) {
+    message = 'no developer message';
+  }
+  return `${heading} | ${currentBranch} :: ${message}`;
 }
 
 
 function commitAndPush(done) {
   // gulp.series(compileSass)
   let gitJob = `\`which git\` add .`;
-  gitJob += `&& \`which git\` commit --message "${gitMessageHeading()}"`;
+  gitJob += `&& \`which git\` commit --message "${gitMessageBuilder()}"`;
   gitJob += `&& \`which git\` push -u github master`;
   gitJob += `&& \`which git\` push -u heroku master`;
   shell.exec(gitJob);
