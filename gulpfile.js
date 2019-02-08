@@ -53,6 +53,7 @@ function gitMessageHeading() {
   return `${heading} | ${currentBranch} :: ${argv.m}`;
 }
 
+
 function commitAndPush() {
   let gitJob = `\`which git\` add .`;
   gitJob += `&& \`which git\` commit --message "${gitMessageHeading()}"`;
