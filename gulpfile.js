@@ -22,14 +22,13 @@ function compileSass(done) {
     done();
 }
 // task
-gulp.task('sass', () => {
-  compileSass();
-});
+gulp.task('sass', compileSass);
 //
 // =================== Watch  ==================================================
-function watch() {
+function watch(done) {
   // add all watch tasks here
   gulp.watch(sassPath, compileSass);
+  done();
 }
 
 // task
@@ -74,14 +73,6 @@ function commitAndPush(done) {
   shell.exec(gitJob);
   done();
 }
-
-
-gulp.task('test', (done) => {
-  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
-  console.log(`My git user name: ${gitUser}`);
-  done();
-});
-
 
 
 gulp.task('push', gulp.series(compileSass, commitAndPush));
