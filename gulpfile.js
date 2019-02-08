@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
-const shell = require('gulp-shell');
+const shell = require('shelljs');
 const { argv } = require('yargs');
 
 const sassPath = '_dev/sass_files/lib/*.sass';
@@ -34,20 +34,34 @@ gulp.task('watch', watch);
 
 // =================== Git  ====================================================
 
-// function gitMessageHeading() {
-//   let heading = ""
-//   if(argv.s) {
-//
-//   }
-// }
+function gitMessageHeading() {
+  // find current branch
+  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
+  console.log('\nWorking branch: ', currentBranch);
+  //
+  let heading = '';
+  if(argv.s) {
+    heading = 'STABLE'
+  } else if(argv.b) {
+    heading = 'BROKEN'
+  } else if(argv.f) {
+    heading = 'FEATURE'
+  } else if(argv.h) {
+    heading = 'HOTFIX'
+  }
+
+  return `${heading} | ${currentBranch} :: ${argv.m}`;
+}
 
 
 
 // =================== Shell Scripts  ==========================================
 
 
-gulp.task('greet', () => {
-  shell.task('`which git` add . && `which git` commit -m "test gulp commit"')();
+gulp.task('push', () => {
+  // console.log(argv);
+
+  shell.exec(`\`which git\` add . && \`which git\` commit --message`);
 })
 // =================== Default =================================================
 // just type `gulp` in the terminal to execute all the gulp tasks
