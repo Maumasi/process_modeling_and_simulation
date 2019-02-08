@@ -60,7 +60,7 @@ function gitMessageBuilder() {
   if(!argv.m) {
     message = 'no developer message';
   }
-  return `${heading} | ${currentBranch} :: ${message}`;
+  return `${heading} | (BRANCH) ${currentBranch} :: ${message}`;
 }
 
 
