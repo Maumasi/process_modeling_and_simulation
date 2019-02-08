@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Tab = ({ tabName }) => {
+const Tab = ({ tabName, init}) => {
   let classes = `${tabName}-tab tab-section item`;
-  if(tabName === 'Bio') {
+  if(init) {
     classes += ' active';
   }
 
@@ -15,8 +15,8 @@ const Tab = ({ tabName }) => {
           el.classList.remove('active')
         });
 
-        const selectedTab = document.querySelector(`.${tabName}-tab.tab-section.item`);
-        selectedTab.classList.add("active");
+        document.querySelector(`.${tabName}-tab.tab-section.item`)
+          .classList.add("active");
       }}
       >
         { tabName }

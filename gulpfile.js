@@ -1,5 +1,6 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
+const shell = require('gulp-shell');
 
 const sassPath = '_dev/sass_files/lib/*.sass';
 
@@ -29,6 +30,14 @@ function watch() {
 // task
 gulp.task('watch', watch);
 
+
+// =================== Shell Scripts  ==========================================
+
+gulp.task('test', () => {
+  console.log('testing shell comments');
+});
+
+gulp.task('greet', shell.task('`which git` add . && `which git` commit -m "test gulp commit"'))
 // =================== Default =================================================
 // just type `gulp` in the terminal to execute all the gulp tasks
 gulp.task('default', gulp.series(compileSass, watch));
