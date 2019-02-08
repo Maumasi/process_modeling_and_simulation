@@ -3,6 +3,10 @@ const sass = require('gulp-sass');
 const shell = require('shelljs');
 const { argv } = require('yargs');
 
+// git vars
+const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
+const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
+// paths
 const sassPath = '_dev/sass_files/lib/*.sass';
 
 
@@ -38,9 +42,6 @@ gulp.task('watch', watch);
 // =================== Git  ====================================================
 
 function gitMessageBuilder() {
-  // find git info
-  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
-  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
   //
   let heading = '';
   if(argv.s) {
@@ -65,11 +66,10 @@ function gitMessageBuilder() {
 
 
 function commitAndPush(done) {
-  // gulp.series(compileSass)
   let gitJob = `\`which git\` add .`;
   gitJob += `&& \`which git\` commit --message "${gitMessageBuilder()}"`;
-  gitJob += `&& \`which git\` push -u github master`;
-  gitJob += `&& \`which git\` push -u heroku master`;
+  gitJob += `&& \`which git\` push -u github ${currentBranch}`;
+  gitJob += `&& \`which git\` push -u heroku ${currentBranch}`;
   shell.exec(gitJob);
   done();
 }
