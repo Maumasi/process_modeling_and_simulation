@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const shell = require('gulp-shell');
+const { argv } = require('yargs');
 
 const sassPath = '_dev/sass_files/lib/*.sass';
 
@@ -31,11 +32,19 @@ function watch() {
 gulp.task('watch', watch);
 
 
+// =================== Git  ====================================================
+
+// function gitMessageHeading() {
+//   let heading = ""
+//   if(argv.s) {
+//
+//   }
+// }
+
+
+
 // =================== Shell Scripts  ==========================================
 
-gulp.task('test', () => {
-  console.log('testing shell comments');
-});
 
 gulp.task('greet', shell.task('`which git` add . && `which git` commit -m "test gulp commit"'))
 // =================== Default =================================================
