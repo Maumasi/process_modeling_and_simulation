@@ -26,8 +26,10 @@ gulp.task('sass', () => {
 //
 // =================== Watch  ==================================================
 function watch() {
+  // add all watch tasks here
   gulp.watch(sassPath, compileSass);
 }
+
 // task
 gulp.task('watch', watch);
 
@@ -37,7 +39,6 @@ gulp.task('watch', watch);
 function gitMessageHeading() {
   // find current branch
   const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
-  console.log('\nWorking branch: ', currentBranch);
   //
   let heading = '';
   if(argv.s) {
@@ -49,23 +50,18 @@ function gitMessageHeading() {
   } else if(argv.x) {
     heading = 'HOTFIX'
   }
-
   return `${heading} | ${currentBranch} :: ${argv.m}`;
 }
 
-
-
-// =================== Shell Scripts  ==========================================
-
-
 gulp.task('push', () => {
-  // console.log(argv);
   let gitJob = `\`which git\` add .`;
   gitJob += `&& \`which git\` commit --message "${gitMessageHeading()}"`;
   gitJob += `&& \`which git\` push -u github master`;
   gitJob += `&& \`which git\` push -u heroku master`;
-  shell.exec(gitJob);
-})
+  return shell.exec(gitJob);
+});
+
+
 // =================== Default =================================================
 // just type `gulp` in the terminal to execute all the gulp tasks
 gulp.task('default', gulp.series(compileSass, watch));
