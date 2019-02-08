@@ -46,7 +46,7 @@ function gitMessageHeading() {
     heading = 'BROKEN'
   } else if(argv.f) {
     heading = 'FEATURE'
-  } else if(argv.h) {
+  } else if(argv.x) {
     heading = 'HOTFIX'
   }
 
@@ -63,7 +63,7 @@ gulp.task('push', () => {
   let gitJob = `\`which git\` add .`;
   gitJob += `&& \`which git\` commit --message "${gitMessageHeading()}"`;
   gitJob += `&& \`which git\` push -u github master`;
-  gitJob += `&& \`which git\` push -u heoku master`;
+  gitJob += `&& \`which git\` push -u heroku master`;
   shell.exec(gitJob);
 })
 // =================== Default =================================================
