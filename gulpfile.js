@@ -40,8 +40,8 @@ gulp.task('watch', watch);
 
 function gitMessageBuilder() {
   // find git info
-  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
-  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
+  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1].split('\n')[0];
+  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1].split('\n')[0];
   //
   let heading = '';
   if(argv.s) {
@@ -66,11 +66,12 @@ function gitMessageBuilder() {
 
 
 function commitAndPush(done) {
-  // gulp.series(compileSass)
+  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1].split('\n')[0];
+
   let gitJob = `\`which git\` add .`;
-  gitJob += `&& \`which git\` commit --message "${gitMessageBuilder()}"`;
-  gitJob += `&& \`which git\` push -u github master`;
-  gitJob += `&& \`which git\` push -u heroku master`;
+  gitJob += ` && \`which git\` commit --message "${gitMessageBuilder()}"`;
+  gitJob += ` && \`which git\` push -u github ${currentBranch}`;
+  gitJob += ` && \`which git\` push -u heroku ${currentBranch}`;
   shell.exec(gitJob);
   done();
 }
