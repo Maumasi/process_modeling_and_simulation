@@ -6,29 +6,30 @@ const { argv } = require('yargs');
 const sassPath = '_dev/sass_files/lib/*.sass';
 
 
-// function compileSass(done) {
-//   return gulp.src('./_dev/sass_files/main.sass')
-//     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-//     .pipe(gulp.dest('./client'));
-//     done();
-// }
+function compileSass(done) {
+  return gulp.src('./_dev/sass_files/main.sass')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./client'));
+    done();
+}
 
 // =================== SASS ====================================================
 
 function compileSass(done) {
-  gulp.src('./_dev/sass_files/main.sass')
+  return gulp.src('./_dev/sass_files/main.sass')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./client'));
     done();
 }
 // task
-gulp.task('sass', compileSass);
+gulp.task('sass', () => {
+  compileSass();
+});
 //
 // =================== Watch  ==================================================
-function watch(done) {
+function watch() {
   // add all watch tasks here
   gulp.watch(sassPath, compileSass);
-  done();
 }
 
 // task
@@ -65,15 +66,23 @@ function gitMessageBuilder() {
 
 
 function commitAndPush(done) {
-  // gulp.series(compileSass)
   const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
-  let gitJob = '`which git` add .';
-  gitJob += ' && `which git` commit --message "' + gitMessageBuilder() + '"';
-  gitJob += ' && `which git` push -u github ' + currentBranch;
-  gitJob += ' && `which git` push -u heroku ' + currentBranch;
+
+  let gitJob = `\`which git\` add .`;
+  gitJob += `&& \`which git\` commit --message "${gitMessageBuilder()}"`;
+  gitJob += `&& \`which git\` push -u github ${currentBranch}`;
+  gitJob += `&& \`which git\` push -u heroku ${currentBranch}`;
   shell.exec(gitJob);
   done();
 }
+
+
+gulp.task('test', (done) => {
+  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
+  console.log(`My git user name: ${gitUser}`);
+  done();
+});
+
 
 
 gulp.task('push', gulp.series(compileSass, commitAndPush));
