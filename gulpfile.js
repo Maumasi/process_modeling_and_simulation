@@ -66,7 +66,7 @@ function gitMessageBuilder() {
 
 
 function commitAndPush(done) {
-  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
+  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1]+"";
 
   let gitJob = `git add .`;
   gitJob += ` && git commit --message "${gitMessageBuilder()}"`;
