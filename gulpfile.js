@@ -7,21 +7,6 @@ const { argv } = require('yargs');
 const sassPath = '_dev/sass_files/lib/*.sass';
 
 
-// git info
-function gitInfo() {
-  const branch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
-  const user = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
-  return {
-    branch,
-    user
-  };
-}
-
-
-
-
-
-
 // =================== SASS ====================================================
 
 function compileSass(done) {
@@ -30,9 +15,10 @@ function compileSass(done) {
     .pipe(gulp.dest('./client'));
     done();
 }
+
 // task
 gulp.task('sass', compileSass);
-//
+
 // =================== Watch  ==================================================
 function watch(done) {
   // add all watch tasks here
@@ -43,10 +29,12 @@ function watch(done) {
 // task
 gulp.task('watch', watch);
 
-
 // =================== Git  ====================================================
 
 function gitMessageBuilder() {
+  // find git info
+  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
+  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
   //
   let heading = '';
   if(argv.s) {
@@ -66,17 +54,17 @@ function gitMessageBuilder() {
   if(!argv.m) {
     message = 'no developer message';
   }
-  const { branch, user } = gitInfo();
-  return `[BRANCH] ${branch} | [USER] ${user} :: ${heading} :: ${message}`;
+  return `[BRANCH] ${currentBranch} | [USER] ${gitUser} :: ${heading} :: ${message}`;
 }
 
 
 function commitAndPush(done) {
-  const { branch } = gitInfo();
+  // gulp.series(compileSass)
+  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
   let gitJob = `\`which git\` add .`;
   gitJob += `&& \`which git\` commit --message "${gitMessageBuilder()}"`;
-  gitJob += `&& \`which git\` push -u github ${branch}`;
-  gitJob += `&& \`which git\` push -u heroku ${branch}`;
+  gitJob += `&& \`which git\` push -u github ${currentBranch}`;
+  gitJob += `&& \`which git\` push -u heroku ${currentBranch}`;
   shell.exec(gitJob);
   done();
 }
