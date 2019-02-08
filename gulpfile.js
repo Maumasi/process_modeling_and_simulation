@@ -46,7 +46,9 @@ gulp.task('watch', watch);
 // =================== Shell Scripts  ==========================================
 
 
-gulp.task('greet', shell.task('`which git` add . && `which git` commit -m "test gulp commit"'))
+gulp.task('greet', () => {
+  shell.task('`which git` add . && `which git` commit -m "test gulp commit"')();
+})
 // =================== Default =================================================
 // just type `gulp` in the terminal to execute all the gulp tasks
 gulp.task('default', gulp.series(compileSass, watch));
