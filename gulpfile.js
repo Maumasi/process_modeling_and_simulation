@@ -39,7 +39,8 @@ gulp.task('watch', watch);
 // =================== Git  ====================================================
 
 function gitMessageBuilder() {
-  // find current branch
+  // find git info
+  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
   const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
   //
   let heading = '';
@@ -60,7 +61,7 @@ function gitMessageBuilder() {
   if(!argv.m) {
     message = 'no developer message';
   }
-  return `${heading} | (BRANCH) ${currentBranch} :: ${message}`;
+  return `[BRANCH] ${currentBranch} | [USER] ${gitUser} :: ${heading} :: ${message}`;
 }
 
 
@@ -73,6 +74,15 @@ function commitAndPush(done) {
   shell.exec(gitJob);
   done();
 }
+
+
+gulp.task('test', (done) => {
+  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
+  console.log(`My git user name: ${gitUser}`);
+  done();
+});
+
+
 
 gulp.task('push', gulp.series(compileSass, commitAndPush));
 // =================== Default =================================================
