@@ -60,8 +60,11 @@ function gitMessageHeading() {
 
 gulp.task('push', () => {
   // console.log(argv);
-
-  shell.exec(`\`which git\` add . && \`which git\` commit --message`);
+  let gitJob = `\`which git\` add .`;
+  gitJob += `&& \`which git\` commit --message "${gitMessageHeading()}"`;
+  gitJob += `&& \`which git\` push -u github master`;
+  gitJob += `&& \`which git\` push -u heoku master`;
+  shell.exec(gitJob);
 })
 // =================== Default =================================================
 // just type `gulp` in the terminal to execute all the gulp tasks
