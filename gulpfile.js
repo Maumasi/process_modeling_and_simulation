@@ -3,15 +3,16 @@ const sass = require('gulp-sass');
 const shell = require('shelljs');
 const { argv } = require('yargs');
 
-const sassPath = '_dev/sass_files/lib/*.sass';
-
-
-function compileSass(done) {
-  return gulp.src('./_dev/sass_files/main.sass')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(gulp.dest('./client'));
-    done();
+// git info
+const gitInfo = {
+  user: shell.exec('`which git` config --list | grep "user.name"').split('=')[1].split('\n')[0],
+  branch: shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1].split('\n')[0],
 }
+// paths
+const watchPaths = {
+  sass: '_dev/sass_files/lib/*.sass',
+};
+
 
 // =================== SASS ====================================================
 
@@ -22,27 +23,23 @@ function compileSass(done) {
     done();
 }
 // task
-gulp.task('sass', () => {
-  compileSass();
-});
-//
+gulp.task('sass', compileSass);
+
 // =================== Watch  ==================================================
-function watch() {
+function watch(done) {
+  const { sass } = watchPaths;
   // add all watch tasks here
-  gulp.watch(sassPath, compileSass);
+  gulp.watch(sass, compileSass);
+  done();
 }
 
 // task
 gulp.task('watch', watch);
 
-
 // =================== Git  ====================================================
 
 function gitMessageBuilder() {
-  // find git info
-  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1].split('\n')[0];
-  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1].split('\n')[0];
-  //
+  const { user, branch } = gitInfo;
   let heading = '';
   if(argv.s) {
     heading = 'STABLE'
@@ -61,31 +58,25 @@ function gitMessageBuilder() {
   if(!argv.m) {
     message = 'no developer message';
   }
-  return `[BRANCH] ${currentBranch} | [USER] ${gitUser} :: ${heading} :: ${message}`;
+  return `[BRANCH] ${branch} | [USER] ${user} :: ${heading} :: ${message}`;
 }
 
 
 function commitAndPush(done) {
-  const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1].split('\n')[0];
-
+  const { branch } = gitInfo;
   let gitJob = `\`which git\` add .`;
   gitJob += ` && \`which git\` commit --message "${gitMessageBuilder()}"`;
-  gitJob += ` && \`which git\` push -u github ${currentBranch}`;
-  gitJob += ` && \`which git\` push -u heroku ${currentBranch}`;
+  gitJob += ` && \`which git\` push -u github ${branch}`;
+  gitJob += ` && \`which git\` push -u heroku ${branch}`;
   shell.exec(gitJob);
   done();
 }
 
 
-gulp.task('test', (done) => {
-  const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
-  console.log(`My git user name: ${gitUser}`);
-  done();
-});
-
-
-
 gulp.task('push', gulp.series(compileSass, commitAndPush));
+
 // =================== Default =================================================
 // just type `gulp` in the terminal to execute all the gulp tasks
 gulp.task('default', gulp.series(compileSass, watch));
+
+//
