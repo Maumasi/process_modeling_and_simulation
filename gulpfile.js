@@ -3,19 +3,24 @@ const sass = require('gulp-sass');
 const shell = require('shelljs');
 const { argv } = require('yargs');
 
-// git vars
-const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
-const gitUser = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
 // paths
 const sassPath = '_dev/sass_files/lib/*.sass';
 
 
-function compileSass(done) {
-  return gulp.src('./_dev/sass_files/main.sass')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(gulp.dest('./client'));
-    done();
+// git info
+function gitInfo() {
+  const branch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
+  const user = shell.exec('`which git` config --list | grep "user.name"').split('=')[1];
+  return {
+    branch,
+    user
+  };
 }
+
+
+
+
+
 
 // =================== SASS ====================================================
 
@@ -61,15 +66,17 @@ function gitMessageBuilder() {
   if(!argv.m) {
     message = 'no developer message';
   }
-  return `[BRANCH] ${currentBranch} | [USER] ${gitUser} :: ${heading} :: ${message}`;
+  const { branch, user } = gitInfo();
+  return `[BRANCH] ${branch} | [USER] ${user} :: ${heading} :: ${message}`;
 }
 
 
 function commitAndPush(done) {
+  const { branch } = gitInfo();
   let gitJob = `\`which git\` add .`;
   gitJob += `&& \`which git\` commit --message "${gitMessageBuilder()}"`;
-  gitJob += `&& \`which git\` push -u github ${currentBranch}`;
-  gitJob += `&& \`which git\` push -u heroku ${currentBranch}`;
+  gitJob += `&& \`which git\` push -u github ${branch}`;
+  gitJob += `&& \`which git\` push -u heroku ${branch}`;
   shell.exec(gitJob);
   done();
 }
