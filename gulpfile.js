@@ -6,18 +6,20 @@ const { argv } = require('yargs');
 const sassPath = '_dev/sass_files/lib/*.sass';
 
 
-function compileSass() {
+function compileSass(done) {
   return gulp.src('./_dev/sass_files/main.sass')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./client'));
+    done();
 }
 
 // =================== SASS ====================================================
 
-function compileSass() {
+function compileSass(done) {
   return gulp.src('./_dev/sass_files/main.sass')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./client'));
+    done();
 }
 // task
 gulp.task('sass', () => {
@@ -54,12 +56,14 @@ function gitMessageHeading() {
 }
 
 
-function commitAndPush() {
+function commitAndPush(done) {
+  // gulp.series(compileSass)
   let gitJob = `\`which git\` add .`;
   gitJob += `&& \`which git\` commit --message "${gitMessageHeading()}"`;
   gitJob += `&& \`which git\` push -u github master`;
   gitJob += `&& \`which git\` push -u heroku master`;
-  return shell.exec(gitJob);
+  shell.exec(gitJob);
+  done();
 }
 
 gulp.task('push', gulp.series(compileSass, commitAndPush));
