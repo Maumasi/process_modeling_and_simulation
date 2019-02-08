@@ -2,24 +2,19 @@
 
 import React from 'react';
 
+import { Tab } from './tab'
+
+
 const Navigation = () => {
   return (
     <navigation  className="ui grid">
       <div className="one wide column"></div>
       <div className="two wide column">
         <div className="ui vertical fluid tabular menu">
-          <a className="item active">
-            Bio
-          </a>
-          <a className="item">
-            Pics
-          </a>
-          <a className="item">
-            Companies
-          </a>
-          <a className="item">
-            Links
-          </a>
+          <Tab tabName="Bio" />
+          <Tab tabName="Pics" />
+          <Tab tabName="Companies" />
+          <Tab tabName="Links" />
         </div>
       </div>
       <div className="twelve wide stretched column">
