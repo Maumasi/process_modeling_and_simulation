@@ -3,22 +3,27 @@ const sass = require('gulp-sass');
 const shell = require('shelljs');
 const { argv } = require('yargs');
 
-// paths
 const sassPath = '_dev/sass_files/lib/*.sass';
 
+
+// function compileSass(done) {
+//   return gulp.src('./_dev/sass_files/main.sass')
+//     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+//     .pipe(gulp.dest('./client'));
+//     done();
+// }
 
 // =================== SASS ====================================================
 
 function compileSass(done) {
-  return gulp.src('./_dev/sass_files/main.sass')
+  gulp.src('./_dev/sass_files/main.sass')
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(gulp.dest('./client'));
     done();
 }
-
 // task
 gulp.task('sass', compileSass);
-
+//
 // =================== Watch  ==================================================
 function watch(done) {
   // add all watch tasks here
@@ -28,6 +33,7 @@ function watch(done) {
 
 // task
 gulp.task('watch', watch);
+
 
 // =================== Git  ====================================================
 
