@@ -69,9 +69,9 @@ function commitAndPush(done) {
   const currentBranch = shell.exec('`which git` branch | `which grep` "*"').stdout.split(' ')[1];
 
   let gitJob = `\`which git\` add .`;
-  gitJob += `&& \`which git\` commit --message "${gitMessageBuilder()}"`;
-  gitJob += `&& \`which git\` push -u github ${currentBranch}`;
-  gitJob += `&& \`which git\` push -u heroku ${currentBranch}`;
+  gitJob += ` && \`which git\` commit --message "${gitMessageBuilder()}"`;
+  gitJob += ` && \`which git\` push -u github ${currentBranch}`;
+  gitJob += ` && \`which git\` push -u heroku ${currentBranch}`;
   shell.exec(gitJob);
   done();
 }
