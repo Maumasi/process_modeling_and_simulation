@@ -26,6 +26,13 @@ const Content = () => {
         </p>
 
         <div className="ui hidden divider"></div>
+        <div className="example-images">
+          <Image srcLink="https://i.imgur.com/PGWvq0G.jpg" desription="Beverages in store" width="90%" />
+          <Image srcLink="https://i.imgur.com/k0subXh.jpg" desription="Shoes and shirt in store" width="95%" />
+        </div>
+        <div className="ui hidden divider"></div>
+
+        <div className="ui hidden divider"></div>
         <h3>Current Pay-n-Leave CLP Model</h3>
         <Image srcLink="https://i.imgur.com/GMwWPWI.jpg" desription="Current Pay-n-Leave CLP flow diagram" width="100%" />
         <div className="ui hidden divider"></div>
@@ -179,6 +186,13 @@ const Content = () => {
         <h2 id="resources">References</h2>
 
         <ul className="ref-list">
+        <li>
+          <p>
+            Assorted Bottle And Cans. (n.d.). Retrieved from
+          <a href="https://www.pexels.com/photo/assorted-bottle-and-cans-811108/" target="_blank"> https://www.pexels.com/photo/assorted-bottle-and-cans-811108/</a>
+          </p>
+        </li>
+
           <li>
             <p>
               Bauer, E. (2017, March 27). All About Customer Acquisition Cost (CAC). Retrieved from
@@ -188,13 +202,13 @@ const Content = () => {
           <li>
             <p>
               Becket, X. (2019, January 31). The Cost of Advertising Nationally Broken Down by Medium (2019). Retrieved from
-            <a href="https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium/" target="_blank"> https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium/</a>
+            <a href="https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium/" target="_blank"> https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium</a>
             </p>
           </li>
           <li>
             <p>
               Bhattacharyya, S. (2019, January 11). Target's investment in store pickup for online orders is paying off. Retrieved from
-            <a href="https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off/" target="_blank"> https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off/</a>
+            <a href="https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off/" target="_blank"> https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off</a>
             </p>
           </li>
 
@@ -229,12 +243,65 @@ const Content = () => {
             <a target="_blank" href="https://smallbiztrends.com/2016/10/customer-retention-statistics.html"> https://smallbiztrends.com/2016/10/customer-retention-statistics.html</a>
             </p>
           </li>
+
           <li>
             <p>
               New Research Indicates Retailers Deploying In-Store Mobile Successfully Are Seeing Upwards of 146% Sales Growth. (2018, January 08). Retrieved from
             <a target="_blank" href="https://www.businesswire.com/news/home/20180108005576/en/Research-Retailers-Deploying-In-Store-Mobile-Successfully-146"> https://www.businesswire.com/news/home/20180108005576/en/Research-Retailers-Deploying-In-Store-Mobile-Successfully-146</a>
             </p>
           </li>
+          <li>
+            <p>
+              Pair of Brown Leather Casual Shoes on Table. (n.d.). Retrieved from
+            <a target="_blank" href="https://www.pexels.com/photo/classic-clothes-commerce-fashion-298863/"> https://www.pexels.com/photo/classic-clothes-commerce-fashion-298863</a>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Pilon, A. (2016, October 07). Mobile Coupons Survey: Retailers Could Improve with Mobile Apps. Retrieved from
+            <a target="_blank" href="https://aytm.com/blog/mobile-coupons-survey"> https://aytm.com/blog/mobile-coupons-survey</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Target's Raising Its Minimum Hourly Wage This Fall, and That's Just the Beginning ... (2017, September 25). Retrieved from
+            <a target="_blank" href="https://corporate.target.com/article/2017/09/minimum-hourly-wage"> https://corporate.target.com/article/2017/09/minimum-hourly-wage</a>
+            </p>
+          </li>
+
+
+
+
+
+
+
+          <li>
+            <p>
+              Team, T. (2017, June 16). Why Target Is Consolidating Its Mobile Apps. Retrieved from
+            <a target="_blank" href="https://www.forbes.com/sites/greatspeculations/2017/06/16/why-target-is-consolidating-its-mobile-apps/#609c0f986f75"> https://www.forbes.com/sites/greatspeculations/2017/06/16/why-target-is-consolidating-its-mobile-apps/#609c0f986f75</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Team, T. (2019, January 29). How Much Does it Cost to Make an App in 2018 - App Cost Calculator - 2019. Retrieved from
+            <a target="_blank" href="https://thinkmobiles.com/blog/how-much-cost-make-app"> https://thinkmobiles.com/blog/how-much-cost-make-app</a>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              TGT Balance Sheet | Target Corporation Stock. (2019, February 09). Retrieved from
+            <a target="_blank" href="https://finance.yahoo.com/quote/TGT/balance-sheet?p=TGT"> https://finance.yahoo.com/quote/TGT/balance-sheet?p=TGT</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              TGT Cash Flow | Target Corporation Stock. (2019, February 09). Retrieved from
+            <a target="_blank" href="https://finance.yahoo.com/quote/TGT/cash-flow?p=TGT"> https://finance.yahoo.com/quote/TGT/cash-flow?p=TGT</a>
+            </p>
+          </li>
+
         </ul>
 
       </content>
