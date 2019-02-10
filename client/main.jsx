@@ -1,14 +1,16 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
-import { Navigation, Footer, HomeHero } from '/imports/views/components';
+import { Nav, Footer, Header, Content } from '/imports/views/components';
 
+// <HomeHero />
 const App = () => {
   return (
       <main>
+        <Header />
         <div>
-          <HomeHero />
-          <Navigation />
+          <div className="ui section divider"></div>
+          <Nav />
         </div>
 
         <Footer />

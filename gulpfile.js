@@ -10,7 +10,8 @@ const gitInfo = {
 }
 // paths
 const watchPaths = {
-  sass: '_dev/sass_files/lib/*.sass',
+  libSass: '_dev/sass_files/**/*.sass',
+  mainSass: '_dev/sass_files/**/*.sass',
 };
 
 
@@ -27,10 +28,14 @@ gulp.task('sass', compileSass);
 
 // =================== Watch  ==================================================
 function watch(done) {
-  const { sass } = watchPaths;
+  const { libSass, mainSass } = watchPaths;
+
+  // all task to run before startinf the watch task
+  gulp.series(compileSass);
   // add all watch tasks here
-  gulp.watch(sass, compileSass);
-  done();
+  gulp.watch(libSass, compileSass);
+  gulp.watch(mainSass, compileSass);
+  // done();
 }
 
 // task
@@ -57,7 +62,7 @@ function gitMessageBuilder() {
 
   let message = argv.m;
 
-  if(!(message.length > 0)) {
+  if(!message || !(message.length > 0)) {
     message = 'no message for commit.';
   }
   return `[BRANCH] ${branch} | [USER] ${user} :: ${heading} :: ${message}`;
@@ -80,5 +85,8 @@ gulp.task('push', gulp.series(compileSass, commitAndPush));
 // =================== Default =================================================
 // just type `gulp` in the terminal to execute all the gulp tasks
 gulp.task('default', gulp.series(compileSass, watch));
+
+
+
 
 //

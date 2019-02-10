@@ -6,7 +6,6 @@ import { Meteor } from 'meteor/meteor';
 // }
 
 Meteor.startup(() => {
-  console.log('server file hit');
   // console.log(Meteor.settings.secret.MODE);
   // If the Links collection is empty, add some data.
   // if (Links.find().count() === 0) {
