@@ -161,7 +161,6 @@ const Content = () => {
           </li>
         </ul>
 
-
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
         <h2 id="cost-analysis">Cost Analysis</h2>
