@@ -18,6 +18,7 @@ const App = () => {
   );
 }
 
+console.log(process.env);
 
 
 Meteor.startup(() => {
