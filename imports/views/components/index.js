@@ -5,4 +5,5 @@ export * from './lib/header';
 export * from './lib/content';
 export * from './lib/tab';
 export * from './lib/image';
+export * from './lib/comparison_table';
 export * from './lib/section_content';

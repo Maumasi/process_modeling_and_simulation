@@ -8,15 +8,17 @@ import { Content } from './content'
 const Nav = () => {
   return (
     <div className="ui grid">
-      <div className="one wide column"></div>
-      <nav  className="three wide column">
+      <div className="three wide column"></div>
+      <nav  className="one wide column">
         <div className="sixteen wide ui secondary vertical pointing menu nav">
 
-          <Tab tabName="Research and Analysis" init />
+          <Tab tabName="Research and Analysis" init href="#page" />
           <div className="menu">
             <Tab tabName="Introduction" addedClasses={['sub-item']} href="#introduction" />
             <Tab tabName="Proposed Business Model" addedClasses={['sub-item']} href="#proposed-business-model" />
-            <Tab tabName="Cost Analysis" addedClasses={['sub-item']} />
+            <Tab tabName="KPI" addedClasses={['sub-item']} href="#kpi" />
+            <Tab tabName="Cost Analysis" addedClasses={['sub-item']} href="#cost-analysis"/>
+            <Tab tabName="Resources" addedClasses={['sub-item']} href="#resources" />
           </div>
 
 
@@ -29,7 +31,7 @@ const Nav = () => {
 
         </div>
       </nav>
-      <div className="eleven wide column">
+      <div className="twelve wide column">
         <Content />
       </div>
     </div>

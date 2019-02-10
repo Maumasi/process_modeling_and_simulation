@@ -1,4 +1,15 @@
 content
+
+  & > .page-title
+    padding: 2rem 0 6rem
+
+    span
+      width: 2rem
+      font-family: 'Lora', serif
+      font-size: 4.2rem
+      padding-bottom: 0.5rem
+      border-bottom: 1px solid rgba(0,0,0,0.8)
+
   & > h2
     font-family: 'Lora', serif
     font-size: 2.8rem
@@ -7,3 +18,50 @@ content
     text-indent: 4rem
     font-size: 1.8rem
     font-family: 'Noto Serif', serif
+
+  ul.kpi-calc,
+  ul,
+  li
+    list-style: none
+    margin: 0
+    padding: 0
+
+  li
+    padding-top: 2rem
+
+    p
+      padding: 0
+      margin: 0
+      font-size: 1.8rem
+      color: rgba(0,0,0,0.6)
+
+      &+p
+        font-style: italic
+
+    code
+      font-size: 1.4rem
+      color: rgba(0,0,0,0.8)
+      background: rgba(0,0,0,0.1)
+      border-radius: 2px
+      display: inline-block
+      padding: 0.5rem
+
+
+  td,
+  th
+    font-size: 1.6rem
+
+  th
+    font-style: oblique
+
+  td
+    color: rgba(0,0,0,0.6)
+
+  .ui.definition.table tr td:first-child:not(.ignored)
+    font-size: 1.6rem
+    font-weight: 2
+    font-style: italic
+
+  ul.ref-list > li p
+    text-indent: -2em
+    padding-left: 2em

@@ -1,12 +1,17 @@
 import React from 'react';
 
 import { Image } from './image'
+import { ComparisonTable } from './comparison_table'
 
 const Content = () => {
   return (
     <div className="ui vertical segment grid">
       <div className="one wide column"></div>
       <content className="fifteen wide column">
+
+        <h1 className="page-title"><span>Research and Analysis</span></h1>
+        <div className="ui hidden divider"></div>
+
         <h2>Preface</h2>
         <p>
           The articles found on this site explore vignettes of a fictitious, but typical retail business. The evolution of a business called Pay-n-Leave will play the role of a case study lead by market scenarios and challenges. Market information within the following articles are cited sources unless otherwise stated where fabricated data was used to act as company data.
@@ -66,6 +71,174 @@ const Content = () => {
         <Image srcLink="https://i.imgur.com/drxe7A2.jpg" desription="New Proposed Pay-n-Leave CLP flow diagram" width="100%" />
         <div className="ui hidden divider"></div>
 
+        <h2 id="kpi">Key Profit Indicators (KPI’s)</h2>
+        <p>
+          The following cost analysis comes from a customer base of 27M sampled from Target’s app user base (Team, T., 2017, June 16) and an annual cash flow of $4.466M pre-mobile app Target in 2015 (TGT Cash Flow | Target Corporation Stock., 2019, February 09) and Targets $2.21M and $4.046M cash and cash equivalent from Target’s balance sheet (TGT Balance Sheet | Target Corporation Stock., 2019, February 09). Values for KPI’s were gathered from the following sources:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+              Direct mail coupon response rate: 5.1%
+            </p>
+            <p>(Bozeman, R., 2019, January 30)</p>
+          </li>
+
+          <li>
+            <p>
+              Mobile app coupon response rate: 17%
+            </p>
+            <p>(Pilon, A., 2016, October 07)</p>
+          </li>
+
+          <li>
+            <p>
+              Customer acquisition cost (CAC) : $10 [retail industry average]
+            </p>
+            <p>(Bauer, E., 2017, March 27)</p>
+          </li>
+
+          <li>
+            <p>
+              Unhappy customer churn rate: 11%
+            </p>
+            <p>(Johnston, R., 2018, March 27)</p>
+          </li>
+
+          <li>
+            <p>
+              Mobile development cost $200K and an annual maintenance cost of $46K
+            </p>
+            <p>(Team, T., 2019, January 29)</p>
+          </li>
+
+          <li>
+            <p>
+              Direct mail advertising setup cost $86.4K ($7.2K x 12 designs) with an annual campaign cost of $1.35M ($50 x 1000 units x (27M customers / 1000 units))
+            </p>
+            <p>(Becket, X., 2019, January 31)</p>
+          </li>
+
+          <li>
+            <p>
+              Customer retention of 5% increases profits by 25% to 95% or otherwise stated, 1% customer retention increases profits by 5% to 19%
+            </p>
+            <p>(Gallo, A., 2014, November 05)</p>
+          </li>
+        </ul>
+
+        <div className="ui hidden divider"></div>
+        <div className="ui hidden divider"></div>
+        <h2>Calculated KPI values are as follows</h2>
+
+        <ul className="kpi-calc">
+          <li>
+            <p>
+              Customer retention rate: (coupon response rate - (coupon response rate * unhappy customer churn rate))
+            </p>
+            <code>(0.051  - (0.051 * 0.11)) = 0.0453</code>
+          </li>
+
+          <li>
+            <p>
+              Mobile app customer retention rate: (coupon response rate - (coupon response rate / unhappy customer churn rate))
+            </p>
+            <code>(0.17 - (0.17 * 0.11)) = 0.1513</code>
+          </li>
+
+          <li>
+            <p>
+              Direct mail marketing ROI range: (customer retention rate * 5) and (customer retention rate * 19)
+            </p>
+            <code>(0.0453 * 5) = 0.2265 and (0.0453 * 19) = 0.8607</code>
+          </li>
+
+          <li>
+            <p>
+              Mobile app marketing ROI range: (customer retention rate * 5) and (customer retention rate * 19)
+            </p>
+            <code>(0.1513 * 5) = 0.7565 and (0.1513 * 19) = 2.8747</code>
+          </li>
+        </ul>
+
+
+        <div className="ui hidden divider"></div>
+        <div className="ui hidden divider"></div>
+        <h2 id="cost-analysis">Cost Analysis</h2>
+        <ComparisonTable />
+
+        <div className="ui hidden divider"></div>
+        <div className="ui hidden divider"></div>
+        <h2 id="conclution">Conclusion</h2>
+        <p>
+          To conclude this first article, a mobile coupon app has a high initial cost, but would be expected to produce greater profits in a shorter amount of time compared to the current direct mail coupon CLP system. In addition, the proposed mobile coupon app could provide more opportunities to gather data from Pay-n-Leave customers to use for generating insights of customer patterns and behaviors.
+        </p>
+
+        <div className="ui hidden divider"></div>
+        <div class="ui divider"></div>
+        <div className="ui hidden divider"></div>
+
+
+        <h2 id="resources">References</h2>
+
+        <ul className="ref-list">
+          <li>
+            <p>
+              Bauer, E. (2017, March 27). All About Customer Acquisition Cost (CAC). Retrieved from
+            <a href="https://www.propellercrm.com/blog/customer-acquisition-cost" target="_blank"> https://www.propellercrm.com/blog/customer-acquisition-cost</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Becket, X. (2019, January 31). The Cost of Advertising Nationally Broken Down by Medium (2019). Retrieved from
+            <a href="https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium/" target="_blank"> https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Bhattacharyya, S. (2019, January 11). Target's investment in store pickup for online orders is paying off. Retrieved from
+            <a href="https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off/" target="_blank"> https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off/</a>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Bozeman, R. (2019, January 30). Direct Mail Cost - A Deep Dive Into Direct Mail Pricing. Retrieved from
+            <a target="_blank" href="https://www.postalytics.com/blog/direct-mail-cost/"> https://www.postalytics.com/blog/direct-mail-cost/</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Gallo, A. (2014, November 05). The Value of Keeping the Right Customers. Retrieved from
+            <a target="_blank" href="https://hbr.org/2014/10/the-value-of-keeping-the-right-customers"> https://hbr.org/2014/10/the-value-of-keeping-the-right-customers</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Johnston, R. (2018, March 27). Is Your Retail Churn Rate Above Average? Retrieved from
+            <a target="_blank" href="http://blog.bloomintelligence.com/is-your-retail-churn-rate-above-average"> http://blog.bloomintelligence.com/is-your-retail-churn-rate-above-average</a>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Kennedy, D. S., & Slutsky, J. (2012, April 26). Marketing Math: What's a New Customer Really Worth? Retrieved from
+            <a target="_blank" href="https://www.entrepreneur.com/article/223426"> https://www.entrepreneur.com/article/223426</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              Mansfield, M. (2018, December 26). CUSTOMER RETENTION STATISTICS – The Ultimate Collection for Small Business. Retrieved from
+            <a target="_blank" href="https://smallbiztrends.com/2016/10/customer-retention-statistics.html"> https://smallbiztrends.com/2016/10/customer-retention-statistics.html</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              New Research Indicates Retailers Deploying In-Store Mobile Successfully Are Seeing Upwards of 146% Sales Growth. (2018, January 08). Retrieved from
+            <a target="_blank" href="https://www.businesswire.com/news/home/20180108005576/en/Research-Retailers-Deploying-In-Store-Mobile-Successfully-146"> https://www.businesswire.com/news/home/20180108005576/en/Research-Retailers-Deploying-In-Store-Mobile-Successfully-146</a>
+            </p>
+          </li>
+        </ul>
 
       </content>
     </div>
