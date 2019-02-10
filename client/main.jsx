@@ -18,8 +18,6 @@ const App = () => {
   );
 }
 
-console.log(process);
-
 
 Meteor.startup(() => {
   render(<App />, document.getElementById('react-target'));

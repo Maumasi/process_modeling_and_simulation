@@ -1,8 +1,16 @@
 nav
   a
-    font-size: 1.8rem
-  & > .ui.secondary.vertical.pointing.menu .active.item
+    font-size: 1.7rem
+    border: 1px solid red
+
+  & > .ui.secondary.vertical.pointing.menu .active.item,
     border-color: $pay-n-leave-clr
-    margin-left: 1rem
-    // border-width: 0.3rem
     color: $pay-n-leave-clr
+
+.ui.secondary.vertical.pointing.menu .sub-item
+  margin-left: 1.8rem
+  font-size: 1.3rem
+
+  & > .ui.secondary.vertical.pointing.menu .sub-item.active
+    border-color: $pay-n-leave-clr
+    color: $pay-n-leave-clr-dim

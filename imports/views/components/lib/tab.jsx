@@ -1,13 +1,22 @@
 import React from 'react';
 
-const Tab = ({ tabName, init}) => {
-  let classes = `${tabName}-tab tab-section item`;
+const Tab = ({ tabName, addedClasses, init, href}) => {
+  const tabClassName = tabName.split(' ').join('-');
+  let classes = `${tabClassName}-tab sixteen wide column tab-section item`;
+
+  if(addedClasses) {
+    addedClasses.forEach((cls) => {
+      classes += " "+ cls;
+    });
+  }
+
   if(init) {
     classes += ' active';
   }
 
   return (
     <a
+      href={href}
       className={classes}
       onClick={()=> {
         const tab = document.getElementsByClassName("tab-section");
@@ -15,7 +24,7 @@ const Tab = ({ tabName, init}) => {
           el.classList.remove('active')
         });
 
-        document.querySelector(`.${tabName}-tab.tab-section.item`)
+        document.querySelector(`.${tabClassName}-tab.tab-section.item`)
           .classList.add("active");
       }}
       >

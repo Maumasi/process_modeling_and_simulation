@@ -35,7 +35,7 @@ function watch(done) {
   // add all watch tasks here
   gulp.watch(libSass, compileSass);
   gulp.watch(mainSass, compileSass);
-  // done();
+  done();
 }
 
 // task
