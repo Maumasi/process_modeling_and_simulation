@@ -1,4 +1,5 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Tab = ({ tabName, addedClasses, init, href}) => {
   const tabClassName = tabName.split(' ').join('-');
@@ -15,7 +16,7 @@ const Tab = ({ tabName, addedClasses, init, href}) => {
   }
 
   return (
-    <a
+    <AnchorLink
       href={href}
       className={classes}
       onClick={()=> {
@@ -29,7 +30,7 @@ const Tab = ({ tabName, addedClasses, init, href}) => {
       }}
       >
         { tabName }
-    </a>
+    </AnchorLink>
   );
 }
 

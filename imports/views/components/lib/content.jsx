@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Image } from './image'
-import { ComparisonTable } from './comparison_table'
+import { Image } from './image';
+import { ComparisonTable } from './comparison_table';
+import { ReferenceList } from './reference_list';
 
 const Content = () => {
   return (
@@ -183,126 +184,184 @@ const Content = () => {
         <div class="ui divider"></div>
         <div className="ui hidden divider"></div>
 
+
+        {
+          // Wk2 Assignment
+        }
+        
+        <h2 id="business-process-analysis">Business Process Analysis</h2>
+
+        <div className="ui hidden divider"></div>
+        <h3 id="sales-strategy">Sales Strategy</h3>
+        <Image srcLink="https://i.imgur.com/XFtHcBW.jpg" desription="discrete event simulation diagram" width="100%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          In the discrete event simulation diagram above, the steps involved walk through a customer loyalty program (CLP) member going to Pay-n-Leave and searching for a coupon. By using a rotating set of default coupons determined by Pay-n-Leaves business objectives and best preforming products member profiles can begin to be customized through member engagement with the CLP app. Every coupon query adjusts the weight of coupon options available to the member as well as the coupons redeemed by the CLP member. Manufacturer coupons should always be offered to the member. If a manufacturers coupon is not available or more coupons need to be generated due to a new coupon tier being unlocked an algorithmic process can determine the coupon type to be offered. When a coupon is added to, what is currently being referred to as, the “Shopping List” to be used at checkout. After a coupon is redeemed an elapsed timer begins for the CLP points, defining the length of contribution to the member’s total CLP point stack to unlock coupon tiers.
+        </p>
+
+        <p>
+          The transition from an ad-based marketing approach to a mobile app base CLP offers range of benefits not capable of being realized in Pay-n-Leave’s current marketing campaigns. A study conducted by Vibes.com <span className="citation">(2016)</span> shows a total of 73% of consumers with smart phones are interested in saving customer loyalty apps on their phones and 38% are very interested in a mobile CLP app. In the U.S., 77% of adults use or own a smart phone <span className="citation">(Demographics of Mobile Device Ownership and Adoption in the United States., 2018, February 05)</span>, which means that roughly 18.9M of Pay-n-Leave’s 27M customers are likely to own or use a smart phone. At the high end 13.8M customers would be interested in the CLP app and 7.2M on the low end. The same adoption percentages convert to the probability of success at a range between 73% - 38%. Another measure of success to consider is the value of data Pay-n-Leave will begin to have access to and start benefiting from the business insights gained, which at this time could only be speculative thought placing Pay-n-Leave in a position to start collecting data on consumer behaviors to customize shopping experiences for their costumers soon than later is going to be a better move than collecting less data.
+        </p>
+
+        <div className="ui hidden divider"></div>
+        <h2 id="pricing-analysis">Pricing Analysis</h2>
+        <h3 id="domestic-in-store-pricing-strategy">Domestic In-Store Pricing Strategy</h3>
+        <Image srcLink="https://i.imgur.com/MiyHwwt.jpg" desription="casaul loop describing pricing strategy" width="100%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          In the causal loop diagram, there are eight loops and partial loops. In <span className="italics">R</span><span className="lil-num">3</span>, a CLP member earns points to unlock new coupon tiers creating greater buying power for the member, leading to increased spending and buying frequency which in turn generates more CLP points for the member. <span className="italics">R</span><span className="lil-num">2</span> is the extension of <span className="italics">R</span><span className="lil-num">3</span> that describes the effect of store generated coupons that also lead to increased member buying power. The <span className="italics">R</span><span className="lil-num">5</span> loop illustrates that an increase in customer buying power also leads to members searching for more coupons and new coupons where data can be collected. <span className="italics">R</span><span className="lil-num">6</span> shows that collecting data enables business insights adding value to the member, raising customer retention and building brand trust where members are more willing to utilize the CLP app to redeem coupons, continuing to build Pay-n-Leave’s consumer profiles.
+        </p>
+
+        <p>
+          While giving the CLP member more buying power through coupons, increasing store sales volume and increasing total profits in <span className="italics">B</span><span className="lil-num">2</span> it also opens the opportunity for members that don’t increase their spending habits to get a discounted price at the stores expense shown in <span className="italics">R</span><span className="lil-num">4</span>, which is part of the risk involved with generating store discount coupons. Members that tend to not increase their spending habits still provide valuable data to the business to be used in generating business insights.
+        </p>
+
+        <p>
+          <span className="italics">R</span><span className="lil-num">1</span> shows how seasonal products like produce or holiday themed products lead to scarcity of availability, where members will likely be more interested in buying those items before they’re gone for the season or raise in price due to being out of season. Additionally, coupons for scarcity products referred to in <span className="italics">R</span><span className="lil-num">1</span> should have a sooner expiration, notifying members of the coupon soon to be gone as the season comes to a close. As CLP points expire, elapsing past the 30-day limit to encourage members to come back for their monthly shopping, shown as the <span className="italics">B</span><span className="lil-num">1</span> loop, the member’s coupon tiers will begin to lock up as their total CLP points lower day by day.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3 id="online-ecommerce-pricing-strategy">Online Ecommerce Pricing Strategy</h3>
+        <Image srcLink="https://i.imgur.com/8wYWFOw.jpg" desription="stock and flow diagram" width="100%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          The stock and flow diagram depict how the online venture, driven by the mobile CLP app data could be structured to compete in the online ecommerce space.
+        </p>
+
+        <p>
+          Online-only CLP coupons would be the initial incentive to CLP members. Outside factors of Pay-n-Leave’s control might be the economic environment like the event of Pay-n-Leave customers feeling the effects of a recession or as seasonal products come in and are not available at all Pay-n-Leave locations. The use of online-only coupons will help build consumer sentiment from the data, which could be further driven by marketing directly to CLP members through the app. Considerations for legal restriction and regulations on what data can be collected and how data can be used.
+        </p>
+
+        <p>
+          Site traffic can be increased by using business insights on what Pay-n-Leave customers are looking for and when they are looking for it can help efforts towards SEO/SER campaigns, in addition to social media marketing as well as utilizing more ways consumers are able to checkout, using alternate payment methods such as Bitcoin, other Alt-Coins, PayPal, etc.
+        </p>
+
+        <p>
+          After online sales, marketing campaigns can be measured for effectiveness and adjusted as needed. Marketing campaigns are also subject to relevant market competition which can also be tested against business insights gained from the CLP app. Finally, prices strategies can be determined after profits are analyzed, where the in-house CLP app marketing platform can be planned for the next quarter. An additional variable to measure are shipping options used in Pay-n-Leave warehouses, which will add another level of complexity to the supply chain when launching a platform for the world to buy from.
+        </p>
+
+
+
+
+
+
+
+
+
+
+        <div className="ui hidden divider"></div>
+        <div class="ui divider"></div>
+        <div className="ui hidden divider"></div>
+
         <h2 id="resources">References</h2>
 
-        <ul className="ref-list">
-        <li>
-          <p>
-            Assorted Bottle And Cans. (n.d.). Retrieved from
-          <a href="https://www.pexels.com/photo/assorted-bottle-and-cans-811108/" target="_blank"> https://www.pexels.com/photo/assorted-bottle-and-cans-811108/</a>
-          </p>
-        </li>
-
-          <li>
-            <p>
-              Bauer, E. (2017, March 27). All About Customer Acquisition Cost (CAC). Retrieved from
-            <a href="https://www.propellercrm.com/blog/customer-acquisition-cost" target="_blank"> https://www.propellercrm.com/blog/customer-acquisition-cost</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              Becket, X. (2019, January 31). The Cost of Advertising Nationally Broken Down by Medium (2019). Retrieved from
-            <a href="https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium/" target="_blank"> https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              Bhattacharyya, S. (2019, January 11). Target's investment in store pickup for online orders is paying off. Retrieved from
-            <a href="https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off/" target="_blank"> https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off</a>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Bozeman, R. (2019, January 30). Direct Mail Cost - A Deep Dive Into Direct Mail Pricing. Retrieved from
-            <a target="_blank" href="https://www.postalytics.com/blog/direct-mail-cost/"> https://www.postalytics.com/blog/direct-mail-cost/</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              Gallo, A. (2014, November 05). The Value of Keeping the Right Customers. Retrieved from
-            <a target="_blank" href="https://hbr.org/2014/10/the-value-of-keeping-the-right-customers"> https://hbr.org/2014/10/the-value-of-keeping-the-right-customers</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              Johnston, R. (2018, March 27). Is Your Retail Churn Rate Above Average? Retrieved from
-            <a target="_blank" href="http://blog.bloomintelligence.com/is-your-retail-churn-rate-above-average"> http://blog.bloomintelligence.com/is-your-retail-churn-rate-above-average</a>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Kennedy, D. S., & Slutsky, J. (2012, April 26). Marketing Math: What's a New Customer Really Worth? Retrieved from
-            <a target="_blank" href="https://www.entrepreneur.com/article/223426"> https://www.entrepreneur.com/article/223426</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              Mansfield, M. (2018, December 26). CUSTOMER RETENTION STATISTICS – The Ultimate Collection for Small Business. Retrieved from
-            <a target="_blank" href="https://smallbiztrends.com/2016/10/customer-retention-statistics.html"> https://smallbiztrends.com/2016/10/customer-retention-statistics.html</a>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              New Research Indicates Retailers Deploying In-Store Mobile Successfully Are Seeing Upwards of 146% Sales Growth. (2018, January 08). Retrieved from
-            <a target="_blank" href="https://www.businesswire.com/news/home/20180108005576/en/Research-Retailers-Deploying-In-Store-Mobile-Successfully-146"> https://www.businesswire.com/news/home/20180108005576/en/Research-Retailers-Deploying-In-Store-Mobile-Successfully-146</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              Pair of Brown Leather Casual Shoes on Table. (n.d.). Retrieved from
-            <a target="_blank" href="https://www.pexels.com/photo/classic-clothes-commerce-fashion-298863/"> https://www.pexels.com/photo/classic-clothes-commerce-fashion-298863</a>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              Pilon, A. (2016, October 07). Mobile Coupons Survey: Retailers Could Improve with Mobile Apps. Retrieved from
-            <a target="_blank" href="https://aytm.com/blog/mobile-coupons-survey"> https://aytm.com/blog/mobile-coupons-survey</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              Target's Raising Its Minimum Hourly Wage This Fall, and That's Just the Beginning ... (2017, September 25). Retrieved from
-            <a target="_blank" href="https://corporate.target.com/article/2017/09/minimum-hourly-wage"> https://corporate.target.com/article/2017/09/minimum-hourly-wage</a>
-            </p>
-          </li>
+        <ReferenceList
+          references={[
+            {
+              reference: "Assorted Bottle And Cans. (n.d.). Retrieved from",
+              link: "https://www.pexels.com/photo/assorted-bottle-and-cans-811108"
+            },
+            {
+              reference: "Bauer, E. (2017, March 27). All About Customer Acquisition Cost (CAC). Retrieved from",
+              link: "https://www.propellercrm.com/blog/customer-acquisition-cost"
+            },
+            {
+              reference: "Becket, X. (2019, January 31). The Cost of Advertising Nationally Broken Down by Medium (2019). Retrieved from",
+              link: "https://www.webfx.com/blog/business-advice/the-cost-of-advertising-nationally-broken-down-by-medium"
+            },
+            {
+              reference: "Bhattacharyya, S. (2019, January 11). Target's investment in store pickup for online orders is paying off. Retrieved from",
+              link: "https://digiday.com/retail/targets-investment-store-pickup-online-orders-paying-off"
+            },
+            {
+              reference: "Bozeman, R. (2019, January 30). Direct Mail Cost - A Deep Dive Into Direct Mail Pricing. Retrieved from",
+              link: "https://www.postalytics.com/blog/direct-mail-cost"
+            },
+            {
+              reference: "Gallo, A. (2014, November 05). The Value of Keeping the Right Customers. Retrieved from",
+              link: "https://hbr.org/2014/10/the-value-of-keeping-the-right-customers"
+            },
+            {
+              reference: "Johnston, R. (2018, March 27). Is Your Retail Churn Rate Above Average? Retrieved from",
+              link: "http://blog.bloomintelligence.com/is-your-retail-churn-rate-above-average"
+            },
+            {
+              reference: "Kennedy, D. S., & Slutsky, J. (2012, April 26). Marketing Math: What's a New Customer Really Worth? Retrieved from",
+              link: "https://www.entrepreneur.com/article/223426"
+            },
+            {
+              reference: "Mansfield, M. (2018, December 26). CUSTOMER RETENTION STATISTICS – The Ultimate Collection for Small Business. Retrieved from",
+              link: "https://smallbiztrends.com/2016/10/customer-retention-statistics.html"
+            },
+            {
+              reference: "New Research Indicates Retailers Deploying In-Store Mobile Successfully Are Seeing Upwards of 146% Sales Growth. (2018, January 08). Retrieved from",
+              link: "https://www.businesswire.com/news/home/20180108005576/en/Research-Retailers-Deploying-In-Store-Mobile-Successfully-146"
+            },
+            {
+              reference: "Pair of Brown Leather Casual Shoes on Table. (n.d.). Retrieved from",
+              link: "https://www.pexels.com/photo/classic-clothes-commerce-fashion-298863"
+            },
+            {
+              reference: "Pilon, A. (2016, October 07). Mobile Coupons Survey: Retailers Could Improve with Mobile Apps. Retrieved from",
+              link: "https://aytm.com/blog/mobile-coupons-survey"
+            },
+            {
+              reference: "Target's Raising Its Minimum Hourly Wage This Fall, and That's Just the Beginning ... (2017, September 25). Retrieved from",
+              link: "https://corporate.target.com/article/2017/09/minimum-hourly-wage"
+            },
+            {
+              reference: "Team, T. (2017, June 16). Why Target Is Consolidating Its Mobile Apps. Retrieved from",
+              link: "https://www.forbes.com/sites/greatspeculations/2017/06/16/why-target-is-consolidating-its-mobile-apps/#609c0f986f75"
+            },
+            {
+              reference: "Team, T. (2019, January 29). How Much Does it Cost to Make an App in 2018 - App Cost Calculator - 2019. Retrieved from",
+              link: "https://thinkmobiles.com/blog/how-much-cost-make-app"
+            },
+            {
+              reference: "TGT Balance Sheet | Target Corporation Stock. (2019, February 09). Retrieved from",
+              link: "https://finance.yahoo.com/quote/TGT/balance-sheet?p=TGT"
+            },
+            {
+              reference: "TGT Cash Flow | Target Corporation Stock. (2019, February 09). Retrieved from",
+              link: "https://finance.yahoo.com/quote/TGT/cash-flow?p=TGT"
+            },
 
 
-
-
-
-
-
-          <li>
-            <p>
-              Team, T. (2017, June 16). Why Target Is Consolidating Its Mobile Apps. Retrieved from
-            <a target="_blank" href="https://www.forbes.com/sites/greatspeculations/2017/06/16/why-target-is-consolidating-its-mobile-apps/#609c0f986f75"> https://www.forbes.com/sites/greatspeculations/2017/06/16/why-target-is-consolidating-its-mobile-apps/#609c0f986f75</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              Team, T. (2019, January 29). How Much Does it Cost to Make an App in 2018 - App Cost Calculator - 2019. Retrieved from
-            <a target="_blank" href="https://thinkmobiles.com/blog/how-much-cost-make-app"> https://thinkmobiles.com/blog/how-much-cost-make-app</a>
-            </p>
-          </li>
-
-          <li>
-            <p>
-              TGT Balance Sheet | Target Corporation Stock. (2019, February 09). Retrieved from
-            <a target="_blank" href="https://finance.yahoo.com/quote/TGT/balance-sheet?p=TGT"> https://finance.yahoo.com/quote/TGT/balance-sheet?p=TGT</a>
-            </p>
-          </li>
-          <li>
-            <p>
-              TGT Cash Flow | Target Corporation Stock. (2019, February 09). Retrieved from
-            <a target="_blank" href="https://finance.yahoo.com/quote/TGT/cash-flow?p=TGT"> https://finance.yahoo.com/quote/TGT/cash-flow?p=TGT</a>
-            </p>
-          </li>
-
-        </ul>
+            // WK2 References
+            {
+              reference: "Competitive Pricing Strategy -- See How Products Are Priced. (2016, September 07). Retrieved from",
+              link: "https://www.intelligencenode.com/blog/competitive-pricing-strategy-see-products-priced"
+            },
+            {
+              reference: "Demographics of Mobile Device Ownership and Adoption in the United States. (2018, February 05). Retrieved from ",
+              link: "http://www.pewinternet.org/fact-sheet/mobile"
+            },
+            {
+              reference: "Google Trends. (2019, Feb 15). Query: \"online deals\". Retrieved from",
+              link: "https://trends.google.com/trends/explore?date=all&geo=US&q=online%20deals"
+            },
+            {
+              reference: "Google Trends. (2019, Feb 15). Query: \"produce\". Retrieved from ",
+              link: "https://trends.google.com/trends/explore?date=all&geo=US&q=produce"
+            },
+            {
+              reference: "Hanbury, M. (2018, August 27). The clever tricks Target uses to get you to keep spending money. Retrieved from",
+              link: "https://www.businessinsider.com/how-target-gets-you-to-spend-more-money-in-store-2018-4#customers-love-its-private-label-collections-4"
+            },
+            {
+              reference: "Vibes.com. (2016). 2016 Mobile Consumer Study. Retrieved from https://vibes-marketing.s3.amazonaws.com/Website/Reports_%24folder%24/2016-MobileConsumerReport.pdf",
+              link: "https://vibes-marketing.s3.amazonaws.com/Website/Reports_%24folder%24/2016-MobileConsumerReport.pdf"
+            },
+            {
+              reference: "Thomas, J. (2017, November 06). Basic sales analysis. Retrieved from http://analytics-magazine.org/basic-sales-analysis",
+              link: "http://analytics-magazine.org/basic-sales-analysis"
+            },
+          ]}
+        />
 
       </content>
     </div>
