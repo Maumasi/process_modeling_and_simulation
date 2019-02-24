@@ -8,8 +8,7 @@ import { ReferenceList } from './reference_list';
 const Content = () => {
   return (
     <div className="ui vertical segment grid">
-      <div className="one wide column"></div>
-      <content className="fifteen wide column">
+      <content className="fourteen wide column">
 
         <h1 className="page-title"><span>Research and Analysis</span></h1>
         <div className="ui hidden divider"></div>
@@ -137,7 +136,7 @@ const Content = () => {
 
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
-        <h2>Calculated KPI values are as follows</h2>
+        <h3>Calculated KPI values are as follows</h3>
 
         <ul className="kpi-calc">
           <li>
@@ -171,12 +170,12 @@ const Content = () => {
 
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
-        <h2 id="cost-analysis">Cost Analysis</h2>
+        <h3 id="cost-analysis">Cost Analysis</h3>
         <ComparisonTable />
 
         <div className="ui hidden divider"></div>
         <div className="ui hidden divider"></div>
-        <h2 id="conclution">Conclusion</h2>
+        <h3 id="conclution">Conclusion</h3>
         <p>
           To conclude this first article, a mobile coupon app has a high initial cost, but would be expected to produce greater profits in a shorter amount of time compared to the current direct mail coupon CLP system. In addition, the proposed mobile coupon app could provide more opportunities to gather data from Pay-n-Leave customers to use for generating insights of customer patterns and behaviors.
         </p>
@@ -186,6 +185,8 @@ const Content = () => {
         <div className="ui hidden divider"></div>
 
 
+        <div className="ui hidden divider"></div>
+        <div class="ui divider"></div>
         {
           // Wk2 Assignment
         }
@@ -247,6 +248,11 @@ const Content = () => {
 
 
 
+        <div className="ui hidden divider"></div>
+        <div class="ui divider"></div>
+        <div className="ui hidden divider"></div>
+        <div className="ui hidden divider"></div>
+        <div class="ui divider"></div>
 
         {
           // Wk3 Assignment
@@ -254,7 +260,7 @@ const Content = () => {
         <h2 id="operations-research">Operations Research</h2>
 
         <div className="ui hidden divider"></div>
-        <h2 id="operations-analysis">Operations Analysis</h2>
+        <h3 id="operations-analysis">Operations Analysis</h3>
 
         <p>
           A high-level overview of what a five-year plan could look like for the Mobile CLP app can help visualize what is likely to go into each phase of implementing the app.  Below are phases by year of the five-year plan.
@@ -335,9 +341,6 @@ const Content = () => {
 
         <div className="ui hidden divider"></div>
         <h3 id="decision-analysis">Decision Analysis</h3>
-
-        <div className="ui hidden divider"></div>
-        <div class="ui divider"></div>
         <div className="ui hidden divider"></div>
 
         <p>
