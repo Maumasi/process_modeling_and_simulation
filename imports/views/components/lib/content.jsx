@@ -347,7 +347,7 @@ const Content = () => {
 
         <div className="ui hidden divider"></div>
         <h3>Cause and Effect For Customer Retention</h3>
-        <Image srcLink="https://i.imgur.com/TSO7mka.jpg" desription="Cause and Effect Diagram" width="100%" />
+        <Image srcLink="https://i.imgur.com/TSO7mka.jpg" desription="Cause and Effect Diagram" width="60%" />
         <div className="ui hidden divider"></div>
 
         <p>
@@ -379,7 +379,7 @@ const Content = () => {
           The following decision tree diagram illustrates how moving forward with a mobile app for CLP members not only provides benefits to Pay-n-Leave customers but also brings value to the Pay-n-Leave organization.
         </p>
 
-        <Image srcLink="https://i.imgur.com/vhkPLVe.jpg" desription="Decision Tree Diagram" width="100%" />
+        <Image srcLink="https://i.imgur.com/vhkPLVe.jpg" desription="Decision Tree Diagram" width="60%" />
 
         <p>
           By measuring data metrics, cost per lead, and estimated sales the mobile CLP app projections are over $2M in sales alone which is also the deciding factor. The CPL app out preforms Pay-n-Leave’s current projections in every category except in the event of the CLP app having a shrink year. Due to generated store discount coupons annual losses for a shrink year are by just over $50K.
@@ -388,7 +388,7 @@ const Content = () => {
 
         <div className="ui hidden divider"></div>
         <h3>Conclusion</h3>
-        <Image srcLink="https://i.imgur.com/asyMdgi.png" desription="Tableau data projection" width="100%" />
+        <Image srcLink="https://i.imgur.com/asyMdgi.png" desription="Tableau data projection" width="60%" />
         <a target="_blank" href="https://public.tableau.com/profile/maumasi#!/vizhome/ProcessandModeling-wk3/Dashboard1?publish=yes">Tableau Graph</a>
         <div className="ui hidden divider"></div>
 
