@@ -350,7 +350,7 @@ const Content = () => {
 
         <div className="ui hidden divider"></div>
         <h3>Cause and Effect For Customer Retention</h3>
-        <Image srcLink="https://i.imgur.com/TSO7mka.jpg" desription="Cause and Effect Diagram" width="60%" />
+        <Image srcLink="https://i.imgur.com/TSO7mka.jpg" desription="Cause and Effect Diagram" width="90%" />
         <div className="ui hidden divider"></div>
 
         <p>
