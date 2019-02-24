@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Image } from './image';
 import { ComparisonTable } from './comparison_table';
+import { FiveYearPlanTable } from './five_year_plan_table';
 import { ReferenceList } from './reference_list';
 
 const Content = () => {
@@ -188,7 +189,7 @@ const Content = () => {
         {
           // Wk2 Assignment
         }
-        
+
         <h2 id="business-process-analysis">Business Process Analysis</h2>
 
         <div className="ui hidden divider"></div>
@@ -247,15 +248,158 @@ const Content = () => {
 
 
 
+        {
+          // Wk3 Assignment
+        }
+        <h2 id="operations-research">Operations Research</h2>
+
+        <div className="ui hidden divider"></div>
+        <h2 id="operations-analysis">Operations Analysis</h2>
+
+        <p>
+          A high-level overview of what a five-year plan could look like for the Mobile CLP app can help visualize what is likely to go into each phase of implementing the app.  Below are phases by year of the five-year plan.
+        </p>
 
 
+        <div className="ui hidden divider"></div>
+        <h3 id="5yr-plan-phase-1">Phase 1: Define Mission and Expectations</h3>
+        <Image srcLink="https://i.imgur.com/jXfjfPV.jpg" desription="5 year plan: phase 1" width="100%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          By defining the mission of what a Mobile CLP app can provide for Pay-n-Leave, business process requirements can be driven by higher management at the department level. Requirements from the executive level can be used to guide the requirements across the organization. Some examples of business requirements could be to gather information around customer support, what coupons are searched for by department and frequency to gain customer sentiment on product categories coming into demand. Requirements should first be defined by the way data is currently being used by departments and how it’s used to support business processes.
+        </p>
 
 
+        <div className="ui hidden divider"></div>
+        <h3 id="5yr-plan-phase-2">Phase 2: Situation Analysis</h3>
+        <Image srcLink="https://i.imgur.com/9TGaLoV.jpg" desription="5 year plan: phase 2" width="100%" />
+        <div className="ui hidden divider"></div>
 
+        <p>
+          At this phase, the mobile app would go into development for 6-12 months <span className="citation">(Korkishko, I., 2017, October 25)</span>.  Requirements or the intent for the requirements can be adjusted for the app during this phase. Stakeholders will get the chance to oversee progress of the app to ensure requirements are being implemented in a way that supports the mission of the app at weekly stand-up meetings and at project milestones. By the end of year-2 [phase 2] the enterprise level mobile app should be ready for a beta deployment.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3 id="5yr-plan-phase-3">Phase 3: Marketing and Strategy</h3>
+        <Image srcLink="https://i.imgur.com/z36gtjv.jpg" desription="5 year plan: phase 3" width="100%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          In phase 3, A/B testing in a limited consumer base would begin. Florida would provide a good beta deployment for its ranking in the top 10 consumer states <span className="citation">(Hamilton, K., 2015, November 10)</span>. During this testing period UX/UI changes can be altered to fit performance with Pay-n-Leave customers. Server and EDM performance can also be calibrated during this live test. Stakeholders can also determine how user adoption meets their expectations as well as how the app’s live data compares to the data currently being utilized by Pay-n-Leave. By the end of this phase, any changes that need to have can be finalized before deploying nation-wide to all Pay-n-Leave customers.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3 id="5yr-plan-phase-4">Phase 4: Market Mix</h3>
+        <Image srcLink="https://i.imgur.com/BaylOhN.jpg" desription="5 year plan: phase 4" width="100%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          As part of the promotion of the new CLP app, A/B testing would undergo more A/B testing for the marketing effectiveness per region because every demographic across the U.S. is going to be slightly different. To be clear, the CLP app’s look and feel A/B testing is over and should not differ. Doing so would cause confusion for users sharing information inline as well as for trouble shooting with customer service in a nation-wide deployment.
+        </p>
+
+        <p>
+          Promotion of the new CLP app should be in the weekly mailers currently being used, suggested at time of checkout, through product placement around the store that are featured coupons in the CLP app, QR codes on receipts, etc. Pay-n-Leave needs to give customers every opportunity to download the app and attempt to remove any point of friction a customer might encounter.
+        </p>
+
+        <p>
+          In phase four, “just-in-time” reporting can start to provide as close to real-time information to higher-level management as possible, let alone more timely and actionable data Pay-n-Leave can use to adjust to consumer needs or respond to logistic issues by detecting the most up to date demand for products directly from customers from their coupon queries.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3 id="5yr-plan-phase-5">Phase 5: Monitor and Control</h3>
+        <Image srcLink="https://i.imgur.com/filYyYp.jpg" desription="5 year plan: phase 5" width="100%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          At phase five, Pay-n-Leave will have about a year’s worth of customer data to analyze. This should be a large enough dataset to generate insights. If insights are not actionable, there needs to be some data exploration to understand the data as well as business objectives to find where there is a disconnect and possibly make a version update to the mobile app to address the issue.
+        </p>
+
+        <p>
+          The data can also be used to support the viability of bringing Pay-n-Leave to the online market. If logistical data can identify trends or demands that an online Pay-n-Leave e-commerce site can solve or if coupons generated through CLP member profiles suggest that online-only coupons can supply strong online sales to kick-off an e-commerce launch, Pay-n-Leave can start to make moves to position for the online space.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3>Table Summary</h3>
+        <div className="ui hidden divider"></div>
+
+        <p>
+          The summarized data <span className="citation">(PnL Data and Sales Figures., 2019)</span> [fabricated] in the following table comes from an annual projection of the last 365 days to represent the final phase of the five-year plan, the first year after of the Mobile CLP app has launched. Table figures are averages from the 365 daily records.
+        </p>
+
+        <FiveYearPlanTable />
+
+        <div className="ui hidden divider"></div>
+        <h3 id="decision-analysis">Decision Analysis</h3>
 
         <div className="ui hidden divider"></div>
         <div class="ui divider"></div>
         <div className="ui hidden divider"></div>
+
+        <p>
+          By looking at factors that could have some level of impact on CLP member acquisition and ultimately CLP member retention, Pay-n-Leave can begin to fine-tune the total quality management of the customer’s experience in aid of those efforts. The following cause and effect graph highlights some of the most likely factors that contribute to customer retention.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3>Cause and Effect For Customer Retention</h3>
+        <Image srcLink="https://i.imgur.com/TSO7mka.jpg" desription="Cause and Effect Diagram" width="100%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          The cause and effect graph illustrate four categories that contribute to a customer keeping and using the CLP app or falling away from it.
+        </p>
+
+        <p>
+          Technology the app is run on needs to perform the same regardless of the operating system (OS). Given the thousands of device sizes and capabilities, there is bound to raise technical issues, likely small but inconvenient issues. This is where hotfixes or minor version updates will have to be done. Often a fix for one major device will fix the same issue across a broad range of devices. Server overloading and downtime can be easily solved with master/slave server replication to prevent to loss of data or server sharding to evenly distribute database loads <span className="citation">(Rouse, M., 2011, December)</span> or a combination of both.
+        </p>
+
+        <p>
+          Benefits to customer need to be clear to the member. By sending alerts and reminders can help member interaction and raise the app’s retention rate <span className="citation">(Adler, B., 2017)</span>.  Coupon tiers can be a factor to adjust per member based on their activity. Scannable functionality needs to constantly work as expected. Scan load times and coupon query load times can be a point of friction for members.
+        </p>
+
+        <p>
+          Points of engagement to acquire new CLP members may need to be ran at a campaign level to keep the app from falling into a background promotion that gets ignored. Web promotions can consist of targeted Google queries and targeted social media filters that are relevant to Pay-n-Leave customers and Pay-n-Leave locations. Cashiers can ask for CLP app coupons to remind customers of the app or for the casher to inform customers of the app. QR codes on receipts can also provide an opportunity for cashiers to point out how to download the app with a smart phone. Featured coupon products should also be in store promotional locations to help market the app.
+        </p>
+
+        <p>
+          UX/UI of the app is a major factor. If users don’t understand how to use it or user interactions don’t give expected feedback to the user, the adoption rate is going to be low <span className="citation">(Adler, B., 2017)</span>. Load speeds have a large impact on user conversion rates <span className="citation">(An, D., & Meenan, P., 2016, July)</span>. While speeding up load speeds will have technical limits by device and server performance factors, the perception of a load times being faster can be as simple as showing shaded partitions of the expected screen details before those details are actually loaded up. Animations and color theory are also factors contributing to user feedback without using text to communicate confirmations or user caused errors when selecting a coupon or scanning non-UPC barcodes.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3>Decision Tree</h3>
+        <div className="ui hidden divider"></div>
+
+        <p>
+          The following decision tree diagram illustrates how moving forward with a mobile app for CLP members not only provides benefits to Pay-n-Leave customers but also brings value to the Pay-n-Leave organization.
+        </p>
+
+        <Image srcLink="https://i.imgur.com/vhkPLVe.jpg" desription="Decision Tree Diagram" width="100%" />
+
+        <p>
+          By measuring data metrics, cost per lead, and estimated sales the mobile CLP app projections are over $2M in sales alone which is also the deciding factor. The CPL app out preforms Pay-n-Leave’s current projections in every category except in the event of the CLP app having a shrink year. Due to generated store discount coupons annual losses for a shrink year are by just over $50K.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3>Conclusion</h3>
+        <Image srcLink="https://i.imgur.com/asyMdgi.png" desription="Tableau data projection" width="100%" />
+        <a target="_blank" href="https://public.tableau.com/profile/maumasi#!/vizhome/ProcessandModeling-wk3/Dashboard1?publish=yes">Tableau Graph</a>
+        <div className="ui hidden divider"></div>
+
+        <p>
+          In conclusion, if the mobile CLP app had launched twelve months ago the above graphs illustrates that the projected sales leading up to the 2019 first quarter would have had a much stronger lead than our current marketing strategy with customer loyalty. It is also worth noting that data collected is in direct proportion to sales projections and the cost per lead is more than 100 times less, likely attributed to savings on the cost spent on materials weekly across the nation on ads. It can be seen that there is a sudden dip after December just as it is with Pay-n-Leave’s current strategy. The post-holiday slump may not be solved by implementing the mobile CLP app, but data could be collected during this timeframe to begin to address that business objective through the CLP app.
+        </p>
+
+        <p>
+          The future of the retail industry is one where consumers have thousands of competitors at their fingertips. Some of Pay-n-Leave’s competition has already successfully launched their own mobile CLP apps <span className="citation">(Tode, C., n.d.)</span> and now it’s time for Pay-n-Leave to position its self on a level playing field on the technology front.
+        </p>
+
 
         <h2 id="resources">References</h2>
 
@@ -359,6 +503,36 @@ const Content = () => {
             {
               reference: "Thomas, J. (2017, November 06). Basic sales analysis. Retrieved from http://analytics-magazine.org/basic-sales-analysis",
               link: "http://analytics-magazine.org/basic-sales-analysis"
+            },
+
+            // Wk3 references
+            {
+              reference: "Adler, B. (2017). Mobile Apps: What's a Good Conversion Rate? Retrieved from",
+              link: "http://info.localytics.com/blog/mobile-apps-whats-a-good-conversion-rate",
+            },
+            {
+              reference: "An, D., & Meenan, P. (2016, July). Why Marketers Should Care About Mobile Page Speed. Retrieved from",
+              link: "https://www.thinkwithgoogle.com/marketing-resources/experience-design/mobile-page-speed-load-time",
+            },
+            {
+              reference: "Hamilton, K. (2015, November 10). Top 10 States for Retail. Retrieved from",
+              link: "http://blog.naiop.org/2015/11/top-10-states-for-retail-2",
+            },
+            {
+              reference: "Korkishko, I. (2017, October 25). Mobile app development timeline and stages. Retrieved from",
+              link: "https://syndicode.com/2017/10/25/mobile-app-development-timeline-and-stages",
+            },
+            {
+              reference: "PnL Data and Sales Figures. (2019). Retrieved from",
+              link: "Fabricated Pay-n-Leave Data.xlsx",
+            },
+            {
+              reference: "Rouse, M. (2011, December). What is sharding? - Definition from WhatIs.com. Retrieved from",
+              link: "https://searchoracle.techtarget.com/definition/sharding",
+            },
+            {
+              reference: "Tode, C. (n.d.). Target's Cartwheel 2.0 taps latest mobile best practices to drive conversions. Retrieved from",
+              link: "https://www.retaildive.com/ex/mobilecommercedaily/targets-cartwheel-2-0-taps-latest-mobile-best-practices-to-drive-conversions",
             },
           ]}
         />

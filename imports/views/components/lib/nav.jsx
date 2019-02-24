@@ -35,6 +35,24 @@ const Nav = () => {
           <div class="ui divider"></div>
           <div className="ui hidden divider"></div>
 
+          <Tab tabName="Operations Research" href="#operations-research" />
+          <div className="menu">
+            <Tab tabName="Operations Research" addedClasses={['sub-item']} href="#operations-analysis" />
+            <Tab tabName="5yr Plan: Phase 1" addedClasses={['sub-item']} href="#5yr-plan-phase-1" />
+            <Tab tabName="5yr Plan: Phase 2" addedClasses={['sub-item']} href="#5yr-plan-phase-2" />
+            <Tab tabName="5yr Plan: Phase 3" addedClasses={['sub-item']} href="#5yr-plan-phase-3" />
+            <Tab tabName="5yr Plan: Phase 4" addedClasses={['sub-item']} href="#5yr-plan-phase-4" />
+            <Tab tabName="5yr Plan: Phase 5" addedClasses={['sub-item']} href="#5yr-plan-phase-5" />
+            <Tab tabName="Decision Analysis" addedClasses={['sub-item']} href="#decision-analysis" />
+          </div>
+
+
+
+
+          <div className="ui hidden divider"></div>
+          <div class="ui divider"></div>
+          <div className="ui hidden divider"></div>
+
           <Tab tabName="Resources" href="#resources" />
 
           {
