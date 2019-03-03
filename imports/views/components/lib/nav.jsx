@@ -46,7 +46,21 @@ const Nav = () => {
             <Tab tabName="Decision Analysis" addedClasses={['sub-item']} href="#decision-analysis" />
           </div>
 
+          <div className="ui hidden divider"></div>
+          <div class="ui divider"></div>
+          <div className="ui hidden divider"></div>
 
+
+          <Tab tabName="Human Factors in Modeling" href="#human-factors" />
+          <div className="menu">
+            <Tab tabName="Customer Retention" addedClasses={['sub-item']} href="#customer-retention" />
+            <Tab tabName="Customer Effort" addedClasses={['sub-item']} href="#customer-effort" />
+            <Tab tabName="Decision Under Risk" addedClasses={['sub-item']} href="#decision-under-risk" />
+            <Tab tabName="Customer Retention vs Customer Acquisition" addedClasses={['sub-item']} href="#retention-acquisition" />
+            <Tab tabName="Human Resource" addedClasses={['sub-item']} href="#human-resource" />
+            <Tab tabName="Management Flowchart" addedClasses={['sub-item']} href="#management-flowchart" />
+            <Tab tabName="Recognition-Primed Decision Model" addedClasses={['sub-item']} href="#rpd" />
+          </div>
 
 
           <div className="ui hidden divider"></div>

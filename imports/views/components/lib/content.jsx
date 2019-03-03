@@ -403,6 +403,138 @@ const Content = () => {
           The future of the retail industry is one where consumers have thousands of competitors at their fingertips. Some of Pay-n-Leave’s competition has already successfully launched their own mobile CLP apps <span className="citation">(Tode, C., n.d.)</span> and now it’s time for Pay-n-Leave to position its self on a level playing field on the technology front.
         </p>
 
+        <div className="ui hidden divider"></div>
+        <div class="ui divider"></div>
+        <div className="ui hidden divider"></div>
+        <div className="ui hidden divider"></div>
+        <div class="ui divider"></div>
+
+        {
+          // Wk4
+        }
+
+        <div className="ui hidden divider"></div>
+        <h2 id="human-factors">Human Factors in Modeling</h2>
+        <div className="ui hidden divider"></div>
+
+        <div className="ui hidden divider"></div>
+        <h3 id="customer-retention">Customer Retention</h3>
+        <div className="ui hidden divider"></div>
+
+        <p>
+          Customer acquisition are important and are great short-term campaign level goals, but customer retention is how retail companies play the long-game. If customer retention efforts are done well, the organization’s customers will provide the best marketing for new customer acquisition than the retailer could ever do themselves, word-of-mouth. Not only will your existing customers be more likely to engage in your promotions, but they will also share your promotion with potential first-time buyers <span className="citation">(How to Keep Customers Coming Back., 2017, April 24)</span>. A couple incentives to focus on customer retention are current customers to be more likely to upgrade their spending habits and longtime customers can become brand evangelists for your company <span className="citation">(How to Keep Customers Coming Back., 2017, April 24)</span>.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3 id="customer-effort">Customer Effort</h3>
+        <div className="ui hidden divider"></div>
+
+        <p>
+          Pay-n-Leave’s value proposition is that it is a one-stop-shop to be more convenient for customers that value their time more than shopping around for the best deal. Pay-n-Leave believes that customers are more willing to pay for “today” or pay for “right now” over their efforts of driving around town or waiting for a delivery from an online order. As competition grows with other major outlets like Kroger, Walgreens, Fred Meyers, Walmart, and others Pay-n-Leave has to carve out a more granular value proposition. By focusing on customer satisfaction through personalized deals. Customers not only looking to save time at a one-stop-shop, they can also find value deals trailered made for them through the CLP App.
+        </p>
+
+        <div className="ui hidden divider"></div>
+        <h3 id="decision-under-risk">Decision Under Risk</h3>
+        <Image srcLink="https://i.imgur.com/kPgnQ8o.jpg" desription="decision tree under risk" width="60%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          In the decision tree between trying to understand if new customer acquisition through the CLP app will be more profitable than trying to market to the current customer base. While in some cases new customer acquisitions look to provide better profits than customer retention efforts. Though, customer retention through the CLP app has a higher estimated value given that retained customers are more likely to be responsive to loyalty promotion campaigns <span className="citation">(How to Keep Customers Coming Back., 2017, April 24)</span>.
+        </p>
+
+        <div className="ui hidden divider"></div>
+        <h3 id="retention-acquisition">Customer Retention vs Customer Acquisition</h3>
+        <Image srcLink="https://i.imgur.com/OTg30Bp.png" desription="Customer Retention vs Customer Acquisition" width="60%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          By visualizing estimated purchase volume percent, or customer loyalty with Pay-n-Leave, and the churn rate percent. Due to the higher churn rate from new customers after the 40%-mark new customers represent a lower volume of sales as a group after that point and whoever is going to be a loyal customer has decided by that point. Customer loyalty from retained customer at the 40%-mark have a much lower churn rate and are starting to buy the majority of their purchases from Pay-n-Leave from that point forward, representing a much more significant investment in the long run.
+        </p>
+
+        <p>
+          As noted, new customer acquisition does have significant value in the first phases of a campaign and is where retained customers come from but also are costly before a campaign has reach half-life. By delighting Pay-n-Leaves biggest fans, they are more than willing to market for the organization <span className="citation">(How to Keep Customers Coming Back., 2017, April 24)</span>.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3 id="human-resource">Human Resource</h3>
+        <Image srcLink="https://i.imgur.com/BBgsPzU.jpg" desription="Human Resource Stakeholders" width="60%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          In context of the CLP mobile app, there are several groups of stakeholders, either directly or indirectly, involved with the project. By identifying who the stakeholders are will help create a smooth transition from the current CLP marketing practice to the new CLP mobile app. Stakeholders may not all have the same objectives <span className="citation">(Designing Buildings Wiki Share your construction industry knowledge., 2019, February 18)</span>. It is important therefore to identify areas of convergence and areas of difference between them and to manage individuals whose expectations are unlikely to be met <span className="citation">(Designing Buildings Wiki Share your construction industry knowledge., 2019, February 18)</span>. In the context of the CLP app, expectations that are unlikely to be met will most likely come from within the Pay-n-Leave organization at this first deployment of the app.
+        </p>
+
+
+        <div className="ui hidden divider"></div>
+        <h3 id="management-flowchart">Management Flowchart (OODA Loop)</h3>
+        <div className="ui hidden divider"></div>
+
+        <p>
+          The continuous process following the pattern of observe, orient, decide, and act or the "OODA loop" <span className="citation">(Sokolowski, p.38)</span> can provide a continuous decision model for project management. The process is similar to the engineering design process, where engineers follow the creativity-based engineering design process <span className="citation">(Comparing the Engineering Design Process and the Scientific Method., n.d.)</span>. The problem needs to be clearly defined, researched, build a set of requirements, brainstorm ideas, build a prototype solution and test it, improve, repeat, then finally report the results when all requirements are met <span className="citation">(Comparing the Engineering Design Process and the Scientific Method., n.d.)</span>. With this framework, managing the CLP mobile app from the client’s side will help maintain the primary business objectives expressed through project requirements.
+        </p>
+
+        <Image srcLink="https://i.imgur.com/dmv5FuO.jpg" desription="Management Flowchart OODA Loop" width="60%" />
+
+        <p className="ooda-loop-phase">Observe</p>
+        <p>
+          In the OODA loop diagram, business objectives are the guiding light for the project requirements.
+        </p>
+
+        <p className="ooda-loop-phase">Orientate</p>
+        <p>
+          Weekly agile standup meetings provide an opportunity for the client (Pay-n-Leave) to give input to the development team and design team contracted to build the CLP app. It is the responsibility of Pay-n-Leave to take into account manufacturer’s interests that align with the Pay-n-Leave’s business objective and provides value to customer interests. Additionally, this is the time to make changes to the project requirements if changes are need to better fit business objectives.
+        </p>
+
+        <p className="ooda-loop-phase">Decision</p>
+        <p>
+          If changes are needed, the project manager will need to work with the Pay-n-Leave to decide the best course of action (COA) to take. Making changes could result in a change in the project timeline which would alter the velocity of the estimated deployment date.
+        </p>
+
+        <p className="ooda-loop-phase">Act</p>
+        <p>
+          If there is no need to alter the project, the design and development teams can assume implicit approval from the client, or a guidance on a decision has been made on for changes to be made the project manager can move forward with the feature set to be completed for the next MVP update.
+        </p>
+
+        <p className="ooda-loop-phase">Loop</p>
+        <p>
+          The development cycle continues until the mobile app is ready and Pay-n-Leave is ready to deploy the app in an A/B test area of operations (AO) that was previously suggested to be Florida.
+        </p>
+
+        <div className="ui hidden divider"></div>
+        <h3 id="rpd">Recognition-Primed Decision (RPD) Model</h3>
+        <Image srcLink="https://i.imgur.com/980jD2h.jpg" desription="RPD Model" width="60%" />
+        <div className="ui hidden divider"></div>
+
+        <p>
+          The RPD model describes decisions to be taken during the A/B testing period to prepare for a nation-wide deployment.
+        </p>
+
+        <p>
+          First, the CLP app should be able to meet current targets from the mailers that Pay-n-Leave currently uses. If the app is meeting those goals it can move on to assessing the performance between versions (A/B) deployed. If the CLP app is under preforming, data collected through the app needs to be analyzed, researched, and adjusted until similar customer sales figures are generated from the app.
+        </p>
+
+        <p>
+          If the app is producing similar results but the results are unexpected then the data needs to be analyzed to determine if the results are beneficial or could lead to an undesirable outcome.
+        </p>
+
+        <p>
+          After the CLP app is on track to produce expected results or better, user points of friction need to be identified and adjusted for in the app to remove as many barriers as possible for the user. By coming up with a hypothesis of the results if a given COA is taken it should align with business objectives, provide more value to the customer, and solve the problem initially identified. If the solution meets all three conditions determine if it can be optimized, if so – do so.
+        </p>
+
+        <p>
+          After a new solution has been implemented, build a report with logged results for a knowledge base for the testing cycle of the app to compare results against to track improvements and setbacks based on granular data. If any new data patterns surface from implemented solutions, they should be researched and analyzed for anything significant and if there is anything that can be leveraged from the data.
+        </p>
+
+        <p>
+          Once all business objectives are satisfied and adjustments to user focused issues are optimized but not over-fitted to any one customer demographic (iPhone users, Android users, tablet devices, etc.) <span className="citation">(ElHady, H., 2018, November 08)</span> the CLP app can should be ready to be launched nation-wide.
+        </p>
+
+
+
+
+
 
         <h2 id="resources">References</h2>
 
@@ -536,6 +668,28 @@ const Content = () => {
             {
               reference: "Tode, C. (n.d.). Target's Cartwheel 2.0 taps latest mobile best practices to drive conversions. Retrieved from",
               link: "https://www.retaildive.com/ex/mobilecommercedaily/targets-cartwheel-2-0-taps-latest-mobile-best-practices-to-drive-conversions",
+            },
+
+            // wk4
+            {
+              reference: "Comparing the Engineering Design Process and the Scientific Method. (n.d.). Retrieved from",
+              link: "https://www.sciencebuddies.org/science-fair-projects/engineering-design-process/engineering-design-compare-scientific-method",
+            },
+            {
+              reference: "Designing Buildings Wiki Share your construction industry knowledge. (2019, February 18). Retrieved from",
+              link: "https://www.designingbuildings.co.uk/wiki/Stakeholders_in_development_projects",
+            },
+            {
+              reference: "ElHady, H. (2018, November 08). The Ultimate Guide To Mobile App Analytics. Retrieved from",
+              link: "https://instabug.com/blog/mobile-app-analytics",
+            },
+            {
+              reference: "How to Keep Customers Coming Back. (2017, April 24). Retrieved from",
+              link: "https://thrivehive.com/how-to-keep-customers-coming-back",
+            },
+            {
+              reference: "Sokolowski, John A. Handbook of Real-World Applications in Modeling and Simulation. Wiley-Blackwell, May-12. VitalBook file.",
+              link: "",
             },
           ]}
         />
